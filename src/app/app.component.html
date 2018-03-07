@@ -3,18 +3,29 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <img width="300" alt="Box Logo" src="./assets/box.png">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- (ngSubmit)="calculate(numOf1000g, numOf400g, numOf200g)" -->
+<form>
+  <div class="form-group">
+    <label for="boxEdgeLength">Box edge length:</label>
+    <input type="number" [(ngModel)]="boxEdge" name="boxEdgeLength" class="form-control" id="boxEdgeLength">
+  </div>
+  <div class="form-group">
+    <label for="product1000g">1000g</label>
+    <input type="number" [(ngModel)]="numOf1000g" name="product1000g" class="form-control" id="product1000g">
+  </div>
+  <div class="form-group">
+    <label for="product400g">400g</label>
+    <input type="number" [(ngModel)]="numOf400g" name="product400g" class="form-control" id="product400g">
+  </div>
+  <div class="form-group">
+    <label for="product200g">200g</label>
+    <input type="number" [(ngModel)]="numOf200g" name="product200g" class="form-control" id="product200g">
+  </div>
+  <button (click)="reset()" class="btn btn-primary">Reset</button>
+  <button (click)="calculate(numOf1000g, numOf400g, numOf200g)" class="btn btn-primary">Submit</button>
 
+  <br>
+  <h2 *ngIf="numOfBoxesRequired != 0">Boxes Required: {{numOfBoxesRequired}}</h2>
+</form>
