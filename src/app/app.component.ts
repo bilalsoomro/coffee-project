@@ -21,8 +21,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {}
 
   calculate(numOf1000g: number, numOf400g: number, numOf200g: number) : void {
-    console.log('this.boxEdge', this.boxEdge);
-    console.log('numOf1000g', numOf1000g);
+    // console.log('this.boxEdge', this.boxEdge);
+    // console.log('numOf1000g', numOf1000g);
     this.boxes = [];
     let initialBox = new Box(this.boxEdge, this.boxEdge, this.boxEdge);
     this.boxes.push(initialBox);

@@ -50,9 +50,9 @@ export class Box {
             fits = true;
         }
 
-        console.warn('this.width', this.width + ', this.widthConsumed: ' + this.widthConsumed);
-        console.warn('this.height: ' + this.length + ', this.heightConsumed: ' + this.heightConsumed);
-        console.warn('this.length', this.length + ', this.lengthConsumed: ' + this.lengthConsumed);
+        // console.warn('this.width', this.width + ', this.widthConsumed: ' + this.widthConsumed);
+        // console.warn('this.height: ' + this.length + ', this.heightConsumed: ' + this.heightConsumed);
+        // console.warn('this.length', this.length + ', this.lengthConsumed: ' + this.lengthConsumed);
     
         return fits;
     }
